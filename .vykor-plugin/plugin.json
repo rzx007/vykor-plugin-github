@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "dev.vykor.github",
+  "name": "github",
+  "displayName": "GitHub",
+  "version": "1.0.0",
+  "description": "使用 GitHub CLI 管理仓库、PR、Issue、Release 和 Actions，先核对账号与目标，再按授权执行。",
+  "author": {
+    "name": "rzx007",
+    "url": "https://github.com/rzx007"
+  },
+  "homepage": "https://github.com/rzx007/vykor-plugin-github",
+  "repository": "https://github.com/rzx007/vykor-plugin-github",
+  "license": "MIT",
+  "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTciIGZpbGw9IiMxNzE5MWYiLz48cGF0aCBkPSJNMjMgMTd2MjltMC0xMmMwLTEyIDE5LTYgMTktMTciIHN0cm9rZT0iI2U5ZWRmNSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48ZyBmaWxsPSIjMTcxOTFmIiBzdHJva2U9IiM4Y2I1ZmYiIHN0cm9rZS13aWR0aD0iNCI+PGNpcmNsZSBjeD0iMjMiIGN5PSIxNiIgcj0iNSIvPjxjaXJjbGUgY3g9IjIzIiBjeT0iNDciIHI9IjUiLz48Y2lyY2xlIGN4PSI0MiIgY3k9IjE2IiByPSI1Ii8+PC9nPjwvc3ZnPgo=",
+  "keywords": [
+    "github",
+    "gh",
+    "pull-request",
+    "issues",
+    "actions",
+    "git"
+  ],
+  "introduction": "## 在对话中完成 GitHub 工作\n\n提供 10 个按需加载的工作流技能：检查认证、提交代码、管理 PR 和 Issue、发布版本、查看 Actions、管理仓库、Secret、Gist 与 Codespaces。复用本机 GitHub CLI 的已有登录，不内置凭据或额外后台。\n\n每次操作先核对主机、账号和准确仓库。命令继续接受宿主权限校验；目标和内容已明确授权时连续完成，尚未授权的远端写入先确认。Secret 辅助只预览名称，通过标准输入提交值，并在文件或账号变化时停止。\n\n安装后先在新会话运行 /github:setup。需要本机 gh；Secret 辅助需要 Node.js 22 或以上。操作失败或未知时核对原资源，不自动重放写入。",
+  "prompts": [
+    {
+      "title": "检查 GitHub 环境",
+      "prompt": "使用 GitHub 插件检查本机 gh、当前登录主机和账号，以及当前工作区对应的仓库；先只检查，不改变登录或仓库。"
+    },
+    {
+      "title": "审查当前 PR",
+      "prompt": "使用 GitHub 插件查看当前分支的 PR、差异和 CI，给出具体审查结论；暂时不要提交评论或合并。"
+    },
+    {
+      "title": "提交并创建 PR",
+      "prompt": "使用 GitHub 插件核对当前任务的改动，只提交这次相关代码，推送工作分支并创建 PR，保留其他任务的改动；完成后给我 PR 链接和实际验证结果。"
+    },
+    {
+      "title": "定位 Actions 失败",
+      "prompt": "使用 GitHub 插件检查当前仓库最近失败的 Actions，定位出错步骤并说明依据，先不要重新触发任务。"
+    }
+  ],
+  "components": {
+    "skills": [
+      "./skills/setup/SKILL.md",
+      "./skills/commit/SKILL.md",
+      "./skills/pr/SKILL.md",
+      "./skills/issue/SKILL.md",
+      "./skills/release/SKILL.md",
+      "./skills/workflow-run/SKILL.md",
+      "./skills/secret/SKILL.md",
+      "./skills/repo/SKILL.md",
+      "./skills/gist/SKILL.md",
+      "./skills/codespace/SKILL.md"
+    ]
+  }
+}

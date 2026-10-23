@@ -1,0 +1,14 @@
+{
+  "name": "@rzx007/vykor-plugin-github",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "GitHub CLI workflows for the Vykor plugin marketplace",
+  "repository": { "type": "git", "url": "https://github.com/rzx007/vykor-plugin-github" },
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "build": "node scripts/validate.mjs",
+    "test": "node --test __test__/*.test.mjs"
+  }
+}
