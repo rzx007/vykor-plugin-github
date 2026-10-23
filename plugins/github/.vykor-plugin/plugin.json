@@ -3,13 +3,13 @@
   "id": "dev.vykor.github",
   "name": "github",
   "displayName": "GitHub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "使用 GitHub CLI 管理仓库、PR、Issue、Release 和 Actions，先核对账号与目标，再按授权执行。",
   "author": {
     "name": "rzx007",
     "url": "https://github.com/rzx007"
   },
-  "homepage": "https://github.com/rzx007/vykor-plugin-github",
+  "homepage": "https://github.com/rzx007/vykor-plugin-github/tree/main/plugins/github",
   "repository": "https://github.com/rzx007/vykor-plugin-github",
   "license": "MIT",
   "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTciIGZpbGw9IiMxNzE5MWYiLz48cGF0aCBkPSJNMjMgMTd2MjltMC0xMmMwLTEyIDE5LTYgMTktMTciIHN0cm9rZT0iI2U5ZWRmNSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48ZyBmaWxsPSIjMTcxOTFmIiBzdHJva2U9IiM4Y2I1ZmYiIHN0cm9rZS13aWR0aD0iNCI+PGNpcmNsZSBjeD0iMjMiIGN5PSIxNiIgcj0iNSIvPjxjaXJjbGUgY3g9IjIzIiBjeT0iNDciIHI9IjUiLz48Y2lyY2xlIGN4PSI0MiIgY3k9IjE2IiByPSI1Ii8+PC9nPjwvc3ZnPgo=",

@@ -1,8 +1,8 @@
 # 插件协作约定
 
 - 这是独立 GitHub 工作流插件，不依赖 Vykor 源码。仅使用正式 Native Plugin 清单和宿主已有的 Shell 工具。
-- 每个 Skill 放在 `skills/<name>/SKILL.md`，共享指引放在 `references/`，可执行辅助放在 `scripts/`，测试放在 `__test__/`。
+- 可安装工程位于 `plugins/github/`；下述目录均相对于此工程。每个 Skill 放在 `skills/<name>/SKILL.md`，共享指引放在 `references/`，可执行辅助放在 `scripts/`，测试放在 `__test__/`。
 - 不复制许可未确认的参考实现。按官方 GitHub CLI 文档编写，保持 MIT 许可、稳定插件 ID 和可追溯的固定源码提交。
 - 操作应遵守用户已给出的授权，不重复请求确认；目标或敏感变更未获授权时，先展示准确账号、仓库及内容。
 - Secret 值不能进入聊天、日志、命令参数或版本控制；只通过标准输入交给 `gh`。结果未知时不能声称成功或自动重试。
-- `npm run build` 和 `npm test` 是提交前检查。发布时先推送源码，再向市场提交固定提交号的收录 PR；不在本仓库维护市场下载索引。
+- 在 `plugins/github/` 运行 `npm run build` 和 `npm test`，并在仓库根运行 `node --test __test__/*.test.mjs`，是提交前检查。发布时先推送源码，再向市场提交固定提交号的收录 PR；不在本仓库维护市场下载索引。

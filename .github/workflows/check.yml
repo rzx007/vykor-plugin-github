@@ -16,6 +16,11 @@ jobs:
         with:
           node-version: '24'
           cache: npm
+          cache-dependency-path: plugins/github/package-lock.json
+      - run: node --test __test__/*.test.mjs
       - run: npm ci --ignore-scripts
+        working-directory: plugins/github
       - run: npm run build
+        working-directory: plugins/github
       - run: npm test
+        working-directory: plugins/github

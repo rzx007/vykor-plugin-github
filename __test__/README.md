@@ -1,5 +1,5 @@
-# 定向检查
+# 分发工程检查
 
-`secrets.test.mjs` 验证 Secret 文件解析、预览绑定、账号与仓库核对、标准输入传值及未知结果处理。所有写入使用隔离的假 GitHub CLI，不修改远端 Secret；临时文件由测试自行清理。
+`distribution.test.mjs` 将实际的 `plugins/github` 工程复制到临时目录，在没有仓库其余文件的情况下运行清单、版本、Skill 引用、许可证和 Secret 辅助命令检查。入口为仓库根的 `node --test __test__/*.test.mjs`。
 
-跨模块与命令行回归放在这里。`npm test` 执行全部测试，`npm run build` 检查实际清单和所有 Skill 引用。
+插件自己的命令与权限回归保留在 `plugins/github/__test__/`，通过该工程的 `npm test` 执行。测试不读取用户安装，也不修改远端资源。
